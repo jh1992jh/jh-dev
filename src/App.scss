@@ -1,0 +1,590 @@
+$attention: #7d577f;
+$icon-color: #C4C4C4;
+$xs-side-m: 0 0.2em;
+$xs-updown-m: 0.2em 0;
+$m-side-m: 0 1em;
+$s-full-m: 0.5em;
+$m-full-m: 1em;
+$s-updown-m: 0.5em 0;
+$m-updown-m: 1em 0;
+$m-plus-updown-m: 2em 0;
+$l-updown-m: 3em 0;
+$xl-updown-m: 5em 0;
+$l-plus-updown-m: 4em 0;
+$s-full-p: 0.5em;
+$m-full-p: 1em;
+$l-full-p: 3em;
+$m-updown-p: 1em 0;
+$l-updown-p: 3em 0;
+$s-sidep-m-updown-p: 1em 0.5em;
+$s-side-p: 0.5em;
+$cool-blue: #00a6fb;
+$small-radius: 5px;
+$fast-transition: 0.2s linear;
+$round: 100%;
+
+/* COMMON STYLES */
+body {
+  height: 100vh;
+  background-color: #282c34;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  
+}
+.App {
+  color: white;
+}
+
+button {
+  padding: $m-full-p;
+  width: 150px;
+  background: transparent;
+  border: 1px groove $cool-blue;
+  color: $cool-blue;
+  border-radius: $small-radius;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: -1px -1px 0 0 $cool-blue;
+  text-shadow: -0.5px -0.5px 0.5px $cool-blue;
+  transition: $fast-transition;
+}
+
+button:hover {
+  color: $attention;
+  border: 1px groove $attention;
+  box-shadow: -1px -1px 0 0  $attention;
+  text-shadow: -0.5px -0.5px 0.5px $attention;
+  transition: $fast-transition;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 350px) {
+  button {
+    width: 120px;
+  }
+}
+
+.forMobile {
+  display: none !important; 
+}
+
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+  .forDesktop {
+    display: none !important;
+  }
+
+  .forMobile {
+    display: block !important;
+  }
+}
+
+/* LOADER STYLES*/
+.linesLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1080;
+.loadingText {
+  display: flex;
+  
+  span {
+    margin: 0 0.5px;
+    z-index: 1081;
+    color: $cool-blue;
+    font-size: 2rem;
+  }
+}
+.linesContainer {
+  display: flex;
+  .line {
+    background: $icon-color;
+    border: 1px solid $icon-color;
+    opacity: 0.5;
+    margin: 0 2px;
+    height: 30px;
+    width: 10px;
+  }
+}
+}
+
+@keyframes lineAnim1 {
+  from {border-top: 0px solid $icon-color; border-bottom: 0px solid $icon-color; opacity: 0.5;}
+  to {border-top: 10px solid $icon-color; border-bottom: 10px solid $icon-color; opacity: 1;}
+}
+
+@keyframes textAnim1 {
+  from {opacity: 0.1; text-shadow: 0 0 0 0;}
+  to {opacity: 1; text-shadow: -2px -2px 2px $cool-blue;}
+}
+
+/* NAVBAR STYLES */
+
+nav {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: $s-sidep-m-updown-p;
+  z-index: 1050;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .navIcon {
+
+    
+    .rect1 {
+      width: 45px;
+      transition: 0.4s linear;
+    }
+    .rect3 {
+      width: 15px;
+      transition: 0.4s linear;
+    }
+  }
+
+  .navIcon:hover {
+    transition: 4s linear;
+    .rect1 {
+      width: 15px;
+      transition: 0.4s linear;
+    }
+    .rect3 {
+      width: 45px;
+      transition: 0.4s linear;
+    }
+  }
+
+  .aboutBtn {
+    position: fixed;
+    top: 2em;
+    right: 10em;
+    background: #282c34;
+  }
+
+  .fa-github {
+    color: $icon-color;
+    margin: $m-side-m;
+    font-size: 3rem;
+    position: fixed;
+    top: 0.5em;
+    right: 0;
+    background: #282c34;
+    border-radius: $round;
+  }
+
+  ul {
+    padding: 0;
+    animation: appearAnim1 0.5s linear;
+    li {
+      display: flex; 
+      align-items: center;
+      margin: $m-updown-m;
+
+
+      a {
+        border: 1px groove $cool-blue;
+        padding: 0.2em;
+        cursor: pointer;
+        color: $cool-blue;
+        font-weight: 600;
+        text-shadow: -1px -1px 0 	rgb(0, 126, 211);
+        /* ICONCOLOR BACKGROUND WITH RGBA KINDA TRANSPARENT */
+        background: #454955;
+        /* #DAFFED, #CEEAF7, #454955 */
+        box-shadow: -1px -1px 1px $cool-blue;
+        transition: $fast-transition;
+      }
+
+      a:hover {
+        color: #C4C4C4;
+        transition: $fast-transition;
+      }
+
+    }
+  }
+
+  @media only screen and (min-width: 300px) and (max-width: 349px) {
+    
+    .navIcon {
+      margin: 0;
+    }
+    
+    .aboutBtn {
+      top: 1.5em;
+      right: 8em;
+    }
+    .fa-github {
+      top: 1rem;  
+      right: -0.7em;
+    }
+  }
+
+  @media only screen and (min-width: 350px) and (max-width: 700px) {
+    .navIcon {
+      margin: 0.5em;
+    }
+    .aboutBtn {
+      top: 1em;
+      right: 8em;
+    }
+
+    .fa-github {
+      right: -0.7em;
+    }
+  } 
+}
+
+@keyframes appearAnim1 {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* HEADER STYLES */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 78vh;
+  margin: $l-updown-m; 
+
+  .headerText {
+    width: 100%;
+    text-align: center;
+    max-width: 50%;
+    margin-top: 5em;
+    font-size: 1.5rem;
+    border: 8px groove $cool-blue;
+    padding: $l-full-p;
+    font-family: 'VT323', monospace;
+    /*
+font-family: 'VT323', monospace;
+font-family: 'Source Code Pro', monospace;
+    */
+    span {
+      color: $attention;
+      font-size: 2em;
+      text-shadow: -2px -2px 1px #df799f;
+    }
+  }
+  
+ .icons {
+   font-size: 3.5rem;
+   display: flex;
+   margin: $m-updown-m;
+  
+   i {
+     margin: $xs-side-m;
+    }
+
+   /* ONLY HERE FOR THE REDUX LOGO */
+   img {
+     width: 56px;
+     height: 57px;
+   }
+ }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+    .arrowDown {
+      margin-left: 0.5em;
+      stroke: $attention;
+      fill: $attention;
+    }
+  }
+
+  @media only screen and (min-width: 300px) and (max-width: 700px) {
+    min-height: 100vh;
+    .headerText {
+      height: 68%;
+    }
+    .icons {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: $m-updown-m;
+      i {
+        margin: 10px;
+      }
+
+    }
+
+    button {
+      margin: 2em auto;
+    }
+  }
+}
+
+/* PROJECT STYLES */
+.project {
+  display: flex;
+  padding: $m-full-p;
+  margin: 8em 0;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+@media only screen and (min-width: 1000px) {
+  .left {
+    order: 0;
+  }
+
+  .right {
+    order: 1;
+  }
+}
+
+  .projectImages {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    img {
+      max-width: 50%;
+    }
+    
+    .desktop {
+      max-height: auto;
+      min-width: 100% !important;
+      max-width: 100%; 
+    }
+    
+    .mobilePics {
+      max-height: 375px; 
+      display: flex;
+      justify-content: center;
+      margin: $m-updown-m;
+    }
+    .mobile {
+      height: 300px;
+      margin: $m-side-m;
+      width: auto;
+    }
+  }
+
+  .projectInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+    h3 {
+      text-align: center;
+    }
+    .info {
+      margin: 3em auto;
+      width: 100%;
+      p {
+        max-width: 40%;
+        text-align: left;
+        margin: auto;
+      }
+
+      ul {
+        margin: $l-updown-m;
+      }
+      
+
+    }
+        button {
+          margin: 0 auto;
+        }
+  }
+
+  @media only screen and (min-width: 300px) and (max-width: 700px) {
+    flex-direction: column;
+    min-height: 150vh;
+    .projectImages {
+      margin: $l-updown-m;
+    }
+
+    .projectInfo {
+      margin: $l-updown-m;
+      padding-top: 2em;
+      .info {
+        p {
+          min-width: 100%;
+        }
+      }
+
+      
+    }
+  }
+
+  @media only screen and (min-width: 300px) and (max-width: 349px) {
+    margin: 14em 0;
+    .projectInfo {
+      margin-top:  6em !important;
+    }
+    button {
+      min-height: 3rem;
+      margin: -3em auto;
+    }
+  }
+
+
+}
+
+@media only screen and (min-width: 350px) and (max-width: 700px) {
+  button {
+    min-height: 3rem;
+    margin: 1em auto;
+  }
+
+}
+
+@media only screen and (min-height: 700px) and (max-height: 1029px) {
+  .project {
+    margin: 0 !important;
+    height: 80vh;
+    max-height: 100vh !important;
+
+    .info {
+      margin: 1.5em auto !important;
+
+      p {
+        min-width: 90% !important;
+        padding: $s-side-p;
+      }
+    }
+  }
+}
+
+@media only screen and (min-height: 1030px) {
+  .project {
+    height: 55vh;
+  }
+}
+
+/* MODAL STYLES */
+.modalBackground {
+  background: rgba(0,0,0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: appearAnim 0.3s linear;
+
+  .modalWrapper {
+    width: 50%;
+    height: 80%;
+    border: 2px groove $cool-blue;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    color: $cool-blue;
+    padding: $m-full-p;
+
+    .aboutImg {
+      flex: 1;
+      margin: $s-full-m;
+      width: auto;
+      max-height: 300px;
+      max-width: 50%;
+    }
+
+    .aboutText {
+      width: 100%;
+      margin: $s-updown-m;
+    }
+
+    .aboutSkills {
+      flex: 1;
+      
+      margin: $s-full-m;
+      display: flex;
+      flex-direction: column;
+    
+        h3 {
+          text-align: center !important;
+          width: 100%;
+          height: 1rem;
+          margin: $s-updown-m;
+        }
+
+        .skillsTab {
+          display: flex;
+          flex-wrap: wrap;
+          max-height: 300px;
+          
+          max-width: 100%;
+          .skill {
+            border: 2px groove $cool-blue;
+            text-align: center;
+            border-radius: 5px;
+            flex: 1;
+            padding: $s-full-p;
+            box-shadow: -1px -1px 0.5px $cool-blue;
+            margin: $s-full-m;
+           
+            i {
+              display: block;
+              color: $attention;
+              font-size: 1.5rem;
+              margin: $xs-updown-m;
+            }
+
+            
+            /* ONLY HERE FOR THE REDUX LOGO*/
+            img {
+              max-width: 24px;
+              max-height: 25px;
+              display: block;
+              margin: 0.2em auto;
+
+            }
+          }
+        }
+    }
+  }
+
+  @media only screen and (min-width: 300px) and (max-width: 700px) {
+    justify-content: flex-start;
+    overflow-y: scroll;
+    .modalWrapper {
+      min-height: 90vh;
+      max-height: auto;
+      overflow-y: scroll;
+
+      width: 100% !important;
+      padding: $s-full-p;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: nowrap;   
+    }
+    .aboutImg {
+      order: 0;
+      min-width: 100% !important;
+      max-width: 100%;
+      height: auto !important;
+      max-height: 400px !important; 
+    }
+
+    .aboutText {
+      order: 1;
+
+    }
+
+    .aboutSkills {
+      order: 2;
+    }
+
+  }
+}
+
+@keyframes appearAnim {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
