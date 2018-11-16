@@ -11,6 +11,7 @@ import rlpDesktop from './imagesPNG/rlp-desktop-1.png';
 import rlpMobile1 from './imagesPNG/rlp-mobile-1.png';
 import rlpMobile2 from './imagesPNG/rlp-mobile-2.png';
 import myOwnPic from './imagesPNG/myownpic.jpg';
+import logo from './imagesPNG/JHLogo.png';
 
 
 export const images = [
@@ -41,5 +42,6 @@ export const images = [
 ]
 
 export const miscImages = {
-    myOwnPic
+    myOwnPic,
+    logo
 }

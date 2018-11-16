@@ -231,7 +231,7 @@ nav {
       margin: 0.5em;
     }
     .aboutBtn {
-      top: 1em;
+      top: 2em;
       right: 8em;
     }
 
@@ -306,6 +306,7 @@ font-family: 'Source Code Pro', monospace;
 
   @media only screen and (min-width: 300px) and (max-width: 700px) {
     min-height: 100vh;
+    margin-bottom: 180px;
     .headerText {
       height: 68%;
     }
@@ -393,7 +394,7 @@ font-family: 'Source Code Pro', monospace;
       
 
     }
-        button {
+        .projectURL {
           margin: 0 auto;
         }
   }
@@ -420,10 +421,14 @@ font-family: 'Source Code Pro', monospace;
 
   @media only screen and (min-width: 300px) and (max-width: 349px) {
     margin: 14em 0;
+    max-width: 100%;
+    padding: $m-full-p;
+
+   
     .projectInfo {
       margin-top:  6em !important;
     }
-    button {
+    .projectURL {
       min-height: 3rem;
       margin: -3em auto;
     }
@@ -433,7 +438,7 @@ font-family: 'Source Code Pro', monospace;
 }
 
 @media only screen and (min-width: 350px) and (max-width: 700px) {
-  button {
+  .projectURL {
     min-height: 3rem;
     margin: 1em auto;
   }
@@ -454,12 +459,93 @@ font-family: 'Source Code Pro', monospace;
         padding: $s-side-p;
       }
     }
+
+    .projectURL {
+      margin: 0 auto;
+    }
   }
 }
 
 @media only screen and (min-height: 1030px) {
   .project {
     height: 55vh;
+  }
+}
+
+/* FOOTER STYLES */
+
+.footer {
+  display: flex;
+  width: 100%;
+  div {
+    flex: 1;  
+  }
+
+  .footerLeft {
+    img {
+      margin: 0 0.5em;
+
+      /* FOR MOBILE size 80x80 */
+    }
+  }
+
+
+  .footerMiddle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      height: 2em;
+      width: 2em;
+      border: 4px groove $cool-blue;
+      border-radius: $small-radius;     
+      margin: $m-side-m;
+      /* FOR MOBILE size 1.4emx1.4em */
+    }
+
+    span:nth-child(even) {
+      border: 4px groove $attention;
+    }
+  }
+
+  @media only screen and (min-width: 350px) and (max-width: 1000px) {
+    max-width: 100%;
+    .footerLeft img {
+      width: 80px;
+      height: 80px;
+
+    }
+
+    .footerMiddle span {
+      width: 1.4em;
+      height: 1.4em;
+
+    }
+  }
+
+  @media only screen and (min-width: 300px) and (max-width: 349px) {
+    max-width: 100%;
+    .footerLeft img {
+      width: 64px;
+      height: 64px;
+
+    }
+
+    .footerMiddle span {
+      width: 1.12em;
+      height: 1.12em;
+
+    }
+  }
+
+  @media only screen and (min-width: 350px) and (max-width: 700px) {
+    .footerMiddle span {
+      margin: 0 1.2em;
+      height: 1.4em;
+      width: 1.4em;
+    }
+
+
   }
 }
 
@@ -521,12 +607,12 @@ font-family: 'Source Code Pro', monospace;
           
           max-width: 100%;
           .skill {
-            border: 2px groove $cool-blue;
+
             text-align: center;
             border-radius: 5px;
             flex: 1;
             padding: $s-full-p;
-            box-shadow: -1px -1px 0.5px $cool-blue;
+
             margin: $s-full-m;
            
             i {
@@ -581,6 +667,44 @@ font-family: 'Source Code Pro', monospace;
       order: 2;
     }
 
+    .closeBtn {
+      position: absolute;
+      top: 0.9em;
+      left: 0.3em;
+      color: $cool-blue;
+      font-size: 3rem;
+      border: 15px groove $attention;
+      border-radius: $round;
+      background: $attention;
+      height: 3rem;
+      width: 3rem;
+      text-align: center;
+      font-family: 'VT323', monospace;
+      -webkit-text-stroke: $attention;
+    -webkit-text-stroke-width: 1px;
+     transition: $fast-transition linear;  
+    }
+
+    .closeBtn:hover {
+      border-color: $cool-blue;
+      color: $attention;
+      background: $cool-blue;
+      transition: $fast-transition;
+    }
+
+  }
+
+  @media only screen and (min-height: 700px) {
+    .modalWrapper {
+      width: 80%;
+      height: 65%;
+
+      .aboutImg {
+        height: auto;
+        width: auto;
+        max-height: 100%;
+      }
+    }
   }
 }
 

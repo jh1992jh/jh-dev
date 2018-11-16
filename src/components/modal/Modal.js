@@ -6,7 +6,10 @@ const Modal = ({ toggleModal }) => {
   return ( 
     <div onClick={toggleModal} className="modalBackground">
       <div className="modalWrapper">
-      <img src={miscImages.myOwnPic} className="aboutImg" />
+      <div className="forMobile">
+        <span className="closeBtn" onClick={toggleModal}>X</span>
+      </div>
+      <img src={miscImages.myOwnPic} className="aboutImg" alt="me" />
       <div className="aboutSkills">
         <h3>Skills</h3>
 

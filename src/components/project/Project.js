@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Project extends Component {
   render() {
-    const { title, desc, technologies, desktopImg, mobile1Img, mobile2Img, side1, side2 } = this.props;
+    const { title, desc, technologies, desktopImg, mobile1Img, mobile2Img, side1, side2, projectURL } = this.props;
     return (
       <div className="project">
         <div className={`projectImages ${side1}`}>
@@ -19,11 +19,13 @@ class Project extends Component {
                 <p>{desc}</p>
 
                 <ul>
-                  {technologies.map(technology => <li>{technology}</li>)}
+                  {technologies.map(technology => <li key={title + technology}>{technology}</li>)}
                 </ul>
             </div>
 
+            <a href={projectURL} target="_blank" rel="noopener noreferrer"  className="projectURL">
             <button>Click to View</button>
+            </a>
         </div>
       </div>
     )

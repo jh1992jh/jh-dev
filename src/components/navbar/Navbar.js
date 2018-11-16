@@ -17,7 +17,7 @@ class Navbar extends Component {
   toggleModal = (e) => {
     const { showModal } = this.state;
     console.log(e.target.className);
-    if(e.target.className === "aboutBtn" || e.target.className === "modalBackground") {
+    if(e.target.className === "aboutBtn" || e.target.className === "modalBackground" || e.target.className === "closeBtn") {
       this.setState({showModal: !showModal});
     }
   }
@@ -26,7 +26,9 @@ class Navbar extends Component {
     return (
       <nav className="topNav">
         <NavIcon toggleNav={this.toggleNav} />
+        <a href="https://github.com/jh1992jh"  target="_blank" rel="noopener noreferrer" className="githubUrl">
         <i className="fab fa-github"></i>
+        </a>
         <button className="aboutBtn" onClick={this.toggleModal}>About</button>
         {open ? (
           <ul>

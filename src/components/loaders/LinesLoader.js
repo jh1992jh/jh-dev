@@ -6,7 +6,6 @@ class LinesLoader extends Component {
     }
 
 componentDidMount () {
-    const { activeLine } = this.state;
     this.lineAnim = setInterval(() => {        
             this.setState((prevState) => {
                 return {

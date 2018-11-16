@@ -4,8 +4,10 @@ import './App.scss';
 import Navbar from './components/navbar/Navbar';
 import Header from './components/header/Header';
 import Project from './components/project/Project';
+import Footer from './components/footer/Footer';
 import { projectsInfo } from './projectsInfo';
 import { Element } from 'react-scroll';
+
 
 // react-scroll example <h3><Link to="test1" spy={true} smooth={true} duration={2000}>Test 1</Link> </h3>
 // <Element name="test1">Test1</Element>
@@ -43,6 +45,7 @@ class App extends Component {
         mobile2Img={projectsInfo[0].mobile2}
         side1="left"
         side2="right"
+        projectURL="https://tranquil-taiga-96610.herokuapp.com/login"
         />
         </Element>
         <Element name="sassyMusicPlayer">
@@ -55,6 +58,7 @@ class App extends Component {
         mobile2Img={projectsInfo[1].mobile2}
         side1="right"
         side2="left"
+        projectURL="https://jh1992jh.github.io/sassy-musicplayer/"
         />
         </Element>
         <Element name="filtermatic">
@@ -67,6 +71,7 @@ class App extends Component {
         mobile2Img={projectsInfo[2].mobile2}
         side1="left"
         side2="right"
+        projectURL="https://jh1992jh.github.io/filtermatic/"
         />
         </Element>
         <Element name="reactLandingPage">
@@ -79,8 +84,10 @@ class App extends Component {
         mobile2Img={projectsInfo[3].mobile2}
         side1="right"
         side2="left"
+        projectURL="https://jh1992jh.github.io/react-landing-page/"
         />
         </Element>
+       <Footer />
       </div>
       )}
       </Fragment>
