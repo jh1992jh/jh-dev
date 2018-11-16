@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/jh-dev/static/media/sm-mobile-1.6201f544.png"
   },
   {
-    "revision": "bdb13ebed4fc3516b9b6",
-    "url": "/jh-dev/static/css/main.cf0a6024.chunk.css"
+    "revision": "d7507aac8054f4f2dbb9",
+    "url": "/jh-dev/static/css/main.1d9724d3.chunk.css"
   },
   {
     "revision": "ba23f5742f7b911801df",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/jh-dev/static/media/sm-desktop-1.21459ced.png"
   },
   {
-    "revision": "bdb13ebed4fc3516b9b6",
-    "url": "/jh-dev/static/js/main.bdb13ebe.chunk.js"
+    "revision": "d7507aac8054f4f2dbb9",
+    "url": "/jh-dev/static/js/main.d7507aac.chunk.js"
   },
   {
     "revision": "47b5ee388c4d63903987e6bb2570130c",
@@ -72,7 +72,7 @@ self.__precacheManifest = [
     "url": "/jh-dev/static/media/myownpic.6536af44.jpg"
   },
   {
-    "revision": "8c52e37785cbca2f882cc78d6a39e0f8",
+    "revision": "b4bc0ccf58c335c430c1fe3e5ec617ee",
     "url": "/jh-dev/index.html"
   }
 ];
